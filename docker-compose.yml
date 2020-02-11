@@ -8,7 +8,8 @@ services:
             context: .
             shm_size: '1gb'
         networks:
-            - backend
+            backend:
+                ipv4_address: 192.168.0.2
         ports:
             - "8000:8888"
         runtime: nvidia
@@ -19,7 +20,8 @@ services:
             context: .
             shm_size: '1gb'
         networks:
-            - backend
+            backend:
+                ipv4_address: 192.168.0.3
         ports:
             - "9000:8888"
         runtime: nvidia
