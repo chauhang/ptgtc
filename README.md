@@ -25,6 +25,7 @@ Once the containers are running, visit the content in your browser at `localhost
 Open a terminal window inside the juperlab browser window above and verify following commands are running.
 
 `ping node2`
+
 `lsof -i -P -n` to see the list of all the open ports
 
 For testing the distributed data parallel across the two hosts, follow below sequence of steps:
