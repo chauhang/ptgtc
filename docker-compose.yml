@@ -10,7 +10,7 @@ services:
         networks:
             - backend
         ports:
-            - "9180:8888"
+            - "8000:8888"
         runtime: nvidia
     node2:
         environment:
@@ -21,7 +21,7 @@ services:
         networks:
             - backend
         ports:
-            - "9181:8888"
+            - "9000:8888"
         runtime: nvidia
 networks:
     backend:
