@@ -1,0 +1,33 @@
+version: '2.4'
+
+services:
+    node1:
+        environment:
+            - NVIDIA_VISIBLE_DEVICES=0,1
+        build:
+            context: .
+            shm_size: '1gb'
+        networks:
+            - backend
+        ports:
+            - "9180:8888"
+        runtime: nvidia
+    node2:
+        environment:
+            - NVIDIA_VISIBLE_DEVICES=2,3
+        build:
+            context: .
+            shm_size: '1gb'
+        networks:
+            - backend
+        ports:
+            - "9181:8888"
+        runtime: nvidia
+networks:
+    backend:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.0.0/24
+
