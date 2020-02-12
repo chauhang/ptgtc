@@ -2,6 +2,23 @@
 
 This repo contains the PyTorch Distributed Deep Learning workshop contents to run on the Nvidia DLI platform. It will simulate two host environment with 2 GPUs per host.
 
+# Docker Compose Instructions
+
+## Requirements
+
+For the purposes of the GTC demo, you will need
+* `docker-ce 18.03`
+* `docker-compose 1.24`
+* NVIDIA driver 418.67 on host
+
+## Usage
+
+Use `docker-compose build` to build the services `node1` and `node2`.
+
+Use `docker-compose up` to launch the services for development.
+
+Use `docker-compose up -d` to launch the services as daemons, and `docker-compose down` to terminate the services.
+
 # Docker Instructions
 
 Use `Dockerfile` to build a docker image with `docker build --no-cache -t ptgtc .`.
