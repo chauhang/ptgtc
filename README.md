@@ -31,11 +31,11 @@ Launch two docker containers (each simulating a host) using the docker image cre
 
 Node 1:
 
-`docker run -d --name node1 --network=backend  -p 8000:8888 --shm-size=1g -e NVIDIA_VISIBLE_DEVICES=0,1 --runtime=nvidia ptgtc`
+`docker run -d --name node1 --network=backend  -p 8000:8888 --shm-size=16g -e NVIDIA_VISIBLE_DEVICES=0,1 --runtime=nvidia ptgtc`
 
 Node 2: 
 
-`docker run -d --name node2 --network=backend  -p 9000:8888 --shm-size=1g -e NVIDIA_VISIBLE_DEVICES=2,3 --runtime=nvidia ptgtc`
+`docker run -d --name node2 --network=backend  -p 9000:8888 --shm-size=16g -e NVIDIA_VISIBLE_DEVICES=2,3 --runtime=nvidia ptgtc`
 
 Once the containers are running, visit the content in your browser at `localhost:8000` and `localhost:9000`
 

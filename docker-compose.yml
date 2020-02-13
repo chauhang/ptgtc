@@ -6,7 +6,7 @@ services:
             - NVIDIA_VISIBLE_DEVICES=0,1
         build:
             context: .
-        shm_size: '1g'
+        shm_size: '16g'
         networks:
             backend:
                 ipv4_address: 192.168.0.2
@@ -18,7 +18,7 @@ services:
             - NVIDIA_VISIBLE_DEVICES=2,3
         build:
             context: .
-        shm_size: '1g'
+        shm_size: '16g'
         networks:
             backend:
                 ipv4_address: 192.168.0.3
@@ -32,4 +32,3 @@ networks:
             driver: default
             config:
                 - subnet: 192.168.0.0/24
-
