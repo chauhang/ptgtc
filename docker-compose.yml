@@ -12,6 +12,7 @@ services:
                 ipv4_address: 192.168.0.2
         ports:
             - "8000:8888"
+            - "8006:6006"
         runtime: nvidia
     node2:
         environment:
@@ -24,6 +25,7 @@ services:
                 ipv4_address: 192.168.0.3
         ports:
             - "9000:8888"
+            - "9006:6006"
         runtime: nvidia
 networks:
     backend:
