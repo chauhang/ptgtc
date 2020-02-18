@@ -10,6 +10,7 @@ RUN conda run -n rapids jupyter lab build
 
 #Add pytorch
 RUN conda run -n rapids pip install torch torchvision
+RUN conda run -n rapids pip install classy_vision captum ax-platform
 
 RUN  apt-get  update -y \
 && apt-get upgrade -y \
